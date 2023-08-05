@@ -1,11 +1,15 @@
-#include <stdio.h>
+#include <SDL2/SDL.h>
+#include <random>
 #include <iostream>
+#include <algorithm>
 #include <stdbool.h>	// for boolean data type
 #include <vector>
+#include "../Sorting Headers/constants.h"
+#include "../Sorting Headers/common.h"
+
 using namespace std;
 
 // O(n^2) in average case
-void selection_sort(int arr[], int len);
 void bubble_sort(int arr[], int len);
 void insertion_sort(int arr[], int len);
 
@@ -18,61 +22,73 @@ void merge(vector<int>arr1, vector<int>arr2, vector<int>& OGarr);
 *  0(n^2) - worst case
 */
 void quicksort(vector<int>arr, int start, int end);
+void visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, 
+unsigned int red, unsigned int blue);
 
-
-int main()
+struct randomElements
 {
-	int arr[] = { 2,8,4,6,3,7,1,9,0 };
-	int len = sizeof(arr) / sizeof(int);
+	random_device rand;
+	uniform_int_distribution<int> elements{5, 1000};
+	vector<int> myVector;
+};
 
-	//selection_sort(arr, len);
+bool isFalse = false;
 
-	int arr1[] = { 2,7,1,4,5,3 };
-	int len1 = sizeof(arr1) / sizeof(int);
-	//bubble_sort(arr1, len1);
-	//insertion_sort(arr1, len1);
+int main(int argc, char* argv[])
+{
+	randomElements myArray;
 
-	vector<int> myVec{ 2,8,4,6,3,7,1,9,0 };
-	merge_sort(myVec);
-
-	for (int i = 0; i < myVec.size(); i++)
+	// length of array passed as argument to program
+	for(int i = 0; i < argc; ++i)
 	{
-		cout << myVec[i] << endl;
+		cout << argv[i] << endl;
 	}
 
-	//for (int i = 0; i < len1; i++)
-	//{
-	//	printf("sorted array element %d: %d\n", i, arr1[i]);
-	//}
+	for(int i = 0; i < stoi(argv[2]); ++i)
+	{
+		myArray.myVector.push_back(myArray.elements(myArray.rand));	// add random int elements to vector
+		printf("%d\n", myArray.myVector[i]);
+	}
+
+	cout << argv[1] << endl;
+	cout << stoi(argv[1]) << endl;
+
+	if(stoi(argv[1]) == 1)	// bubble sort
+	{
+
+	}
+	else if(stoi(argv[1]) == 2)	// bucket sort
+	{
+
+	}
+	else if(stoi(argv[1]) == 3)	// selection sort
+	{
+		cout <<  "in selection sort" << endl;
+		SelectionSort select_sort;
+		select_sort.sort_array(myArray.myVector);
+	}
+	else if(stoi(argv[1]) == 4)	// insertion sort
+	{
+
+	}
+	else if(stoi(argv[1]) == 5)		// heap sort
+	{
+
+	}
+	else if(stoi(argv[1]) == 6)	// quick sort
+	{
+
+	}
+	else if(stoi(argv[1]) == 7)		// merge sort
+	{
+
+	}
+	else
+	{
+		cout << "Invalid choice of sorting algoritm. Exiting program..." << endl;
+	}
 
 	return 0;
-}
-
-/* slow sorting algorithm - 
-*	selection sort algorithm sort the array in-place, which means that no
-*	additional memory is used - O(1)
-*	sorting of elements takes O(n^2) because of nested for loops
-*	average case: O(n^2)
-*	- one for current minimum value
-*	- one for finding new min value
-*/
-void selection_sort(int arr[], int len)
-{
-
-	for (int i = 0; i < len - 1; i++)
-	{
-		int min = i;	// ith element is the min
-		for (int j = i+1; j < len; j++)
-		{
-			if (arr[j] < arr[min])
-			{
-				min = j;	// update index of min val to j element
-			}
-		}
-		int temp = arr[i];	// keep track of old min value
-		arr[i] = arr[min];	// swap prev min with new min
-		arr[min] = temp;	// store prev old min value in min index after swap
-	}
 }
 
 void bubble_sort(int arr[], int len)
