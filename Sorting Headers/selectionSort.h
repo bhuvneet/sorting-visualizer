@@ -1,11 +1,7 @@
 #ifndef SELECTIONSORT_H
 #define SELECTIONSORT_H
 
-#include <SDL2/SDL.h>
-#include <random>
-#include <vector>
-#include <algorithm>
-using namespace std;
+#include "common.h"
 
 class SelectionSort
 {
@@ -16,10 +12,10 @@ public:
     SelectionSort();
     ~SelectionSort();
 
-    void clear_screen(SDL_Renderer* renderer);
-    void visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, unsigned int red, unsigned int blue);
+    //void clear_screen(SDL_Renderer* renderer);
+    //void visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, unsigned int red, unsigned int blue);
     void sort_array(vector<int> myVector);
-    void show_screen(SDL_Renderer* renderer);
+    //void show_screen(SDL_Renderer* renderer);
 };
 
 #endif // SELECTIONSORT_H

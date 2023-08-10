@@ -1,12 +1,7 @@
 #include "../Sorting Headers/selectionSort.h"
 
 SelectionSort::SelectionSort()
-{
-    this->window = nullptr;
-	this->renderer = nullptr;
-	SDL_CreateWindowAndRenderer(100*10, 100*50, 0, &window, &renderer);
-	SDL_RenderSetScale(renderer, 10, .5);
-}
+{}
 
 SelectionSort::~SelectionSort()
 {
@@ -41,11 +36,12 @@ void SelectionSort::sort_array(vector<int> myVector)
 
         // call visualizer
         
-        visualize_sort(myVector, this->renderer, i, min);
+        //visualize_sort(myVector, this->renderer, i, min);
         
 	}
 }
 
+/*
 void SelectionSort::visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, 
 unsigned int red, unsigned int blue)
 {
@@ -97,4 +93,4 @@ void SelectionSort::show_screen(SDL_Renderer* renderer)
 {
     SDL_RenderPresent(renderer);
     SDL_Delay(100);
-}
+}*/

@@ -1,13 +1,6 @@
-#include <SDL2/SDL.h>
-#include <random>
-#include <iostream>
-#include <algorithm>
-#include <stdbool.h>	// for boolean data type
-#include <vector>
 #include "../Sorting Headers/constants.h"
 #include "../Sorting Headers/common.h"
 
-using namespace std;
 
 // O(n^2) in average case
 void bubble_sort(int arr[], int len);
