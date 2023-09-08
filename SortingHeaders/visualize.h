@@ -21,7 +21,7 @@ class Visualize_algo
         void clear_screen(SDL_Renderer* renderer);
         void show_screen(SDL_Renderer* renderer);
         void render_loop(vector<int>& myVector, unsigned int red, unsigned int blue);
-        void visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, unsigned int red, unsigned int blue);
+        void visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, unsigned int newMin, unsigned int currMin);
     };
 
 #endif

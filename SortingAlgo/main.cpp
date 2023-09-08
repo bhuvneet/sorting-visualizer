@@ -75,6 +75,14 @@ int main(int argc, char* argv[])
 		else if(stoi(argv[1]) == 4)	// insertion sort
 		{
 			cout <<  "in insertion sort" << endl;
+			insertionSort insert_sort;
+			insert_sort.sort_array(myArray.myVector);	// pass random array to selection sort
+			printf(" SORTED ARRAY\n");
+			
+			for(int i = 0; i < myArray.myVector.size(); ++i)
+			{
+				printf("%d\n", myArray.myVector[i]);
+			}
 		}
 		else if(stoi(argv[1]) == 5)		// heap sort
 		{
