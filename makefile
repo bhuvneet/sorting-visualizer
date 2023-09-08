@@ -12,7 +12,7 @@ OBJ_DIR = ./obj
 OUTPUT_DIR = ./output
 MAIN_FILE = $(SRC_DIR)/main.cpp
 
-object_files = $(OBJ_DIR)/sort.o $(OBJ_DIR)/bubbleSort.o $(OBJ_DIR)/bucketSort.o $(OBJ_DIR)/heapSort.o $(OBJ_DIR)/insertionSort.o $(OBJ_DIR)/mergeSort.o $(OBJ_DIR)/quickSort.o $(OBJ_DIR)/selectionSort.o
+object_files = $(OBJ_DIR)/sort.o $(OBJ_DIR)/bubbleSort.o $(OBJ_DIR)/bucketSort.o $(OBJ_DIR)/heapSort.o $(OBJ_DIR)/insertionSort.o $(OBJ_DIR)/mergeSort.o $(OBJ_DIR)/quickSort.o $(OBJ_DIR)/selectionSort.o $(OBJ_DIR)/visualize.o
 
 .PHONY: all clean
 

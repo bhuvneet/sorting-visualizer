@@ -7,7 +7,7 @@ bubbleSort::bubbleSort()
 
 bubbleSort::~bubbleSort(){}
 
-void bubbleSort::sort_array(vector<int> myVector)
+void bubbleSort::sort_array(vector<int> &myVector)
 {
 	// Time 
 	//	-- for already sorted array - best case: O(n)

@@ -10,7 +10,7 @@ class insertionSort : public sort_algo
     public:
         insertionSort(/* args */);
         ~insertionSort();
-        void sort_array(vector<int> myVector) override;  // inherited classes will have their implementation
+        void sort_array(vector<int> &myVector) override;  // inherited classes will have their implementation
 };
 
 #endif 

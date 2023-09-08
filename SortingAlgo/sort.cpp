@@ -1,14 +1,11 @@
 #include "../SortingHeaders/sort.h"
 
-sort_algo::sort_algo()
-{
-    SDL_CreateWindowAndRenderer(100*10, 100*50, 0, &window, &renderer);
-    SDL_RenderSetScale(renderer, 10, .5);
-}
+sort_algo::sort_algo(){};
 
 sort_algo::~sort_algo(){};
 
-void sort_algo::visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, unsigned int red, unsigned int blue)
+/*
+void Sort_algo::visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, unsigned int red, unsigned int blue)
 {
 
     // Calculate the maximum height of the elements in the array
@@ -58,4 +55,4 @@ void sort_algo::show_screen(SDL_Renderer* renderer)
 {
     SDL_RenderPresent(renderer);
     SDL_Delay(100);
-}
+}*/

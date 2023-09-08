@@ -8,7 +8,7 @@ insertionSort::~insertionSort(){};
 	average case: O(n^2)
 	# of comparisons are lesser than bubble/selection sort
 */
-void insertionSort::sort_array(vector<int> myVector)
+void insertionSort::sort_array(vector<int> &myVector)
 {
     int len = myVector.size();
 

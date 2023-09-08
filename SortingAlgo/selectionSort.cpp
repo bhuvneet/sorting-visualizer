@@ -1,4 +1,5 @@
 #include "../SortingHeaders/selectionSort.h"
+#include "../SortingHeaders/visualize.h"
 
 SelectionSort::SelectionSort()
 {}
@@ -16,8 +17,11 @@ SelectionSort::~SelectionSort()
 *	- one for current minimum value
 *	- one for finding new min value
 */
-void SelectionSort::sort_array(vector<int> myVector)
+void SelectionSort::sort_array(vector<int> &myVector)
 {
+    this->quit = false;
+    Visualize_algo visualize;
+
     int len = myVector.size();
 
 	for (int i = 0; i < len - 1; i++)
@@ -36,8 +40,10 @@ void SelectionSort::sort_array(vector<int> myVector)
 
         // call visualizer
         
-        //visualize_sort(myVector, this->renderer, i, min);
-        
+        //visualize_sort(myVector, this->renderer, i, min);     
+
+        // visualize the sort calling visualize
+        visualize.render_loop(myVector, i, min);
 	}
 }
 

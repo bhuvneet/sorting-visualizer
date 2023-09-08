@@ -9,7 +9,7 @@ class bubbleSort : public sort_algo
     public:
         bubbleSort(/* args */);
         ~bubbleSort();
-        void sort_array(vector<int> myVector) override;  // inherited classes will have their implementation
+        void sort_array(vector<int> &myVector) override;  // inherited classes will have their implementation
 };
 
 #endif

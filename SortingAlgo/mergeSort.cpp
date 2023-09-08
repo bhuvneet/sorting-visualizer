@@ -9,7 +9,7 @@ mergeSort::~mergeSort(){}
 	sorting done recursively
 	divide and conquer
 */
-void mergeSort::sort_array(vector<int> arr)
+void mergeSort::sort_array(vector<int> &arr)
 {
 	// get length of array to be sorted
 	if (arr.size() > 1)	// if len is less than 2, array is already sorted
