@@ -9,7 +9,7 @@ This Sorting Visualizer project leverages C++ with SLD2 library. It provides an 
 
 <b>Array Size</b>: The size of array can be modified between 20 to 2000. The lower and upper cap to number of elements is to ensure that the sort is visualized in a smooth manner and is easy to follow
 
-<b>Getting Started:<b>
+<b>Getting Started:</b>
 - Build the project
 - Run the project using the following accepted command line arguments
 - Observe the random generated array being sorted using SDL2 graphics
