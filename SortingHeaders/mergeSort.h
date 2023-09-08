@@ -1,11 +1,12 @@
 #ifndef MERGESORT_H
 #define MERGESORT_H
 #include "common.h"
+#include "../SortingHeaders/visualize.h"
 
 class mergeSort : public sort_algo
 {
     private:
-        /* data */
+        Visualize_algo visualize;
     public:
         mergeSort(/* args */);
         ~mergeSort();

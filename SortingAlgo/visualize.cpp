@@ -88,6 +88,58 @@ void Visualize_algo::visualize_sort(vector<int>& myVector, SDL_Renderer* rendere
     show_screen(this->renderer);
 }
 
+void Visualize_algo::render_merge_step(const vector<int>& arr, int index1, int index2)
+{
+    // Clear the screen
+    clear_screen(this->renderer);
+
+    // Define colors
+    SDL_Color redColor = {255, 0, 0, 255};
+    SDL_Color blueColor = {0, 0, 255, 255};
+    SDL_Color greenColor = {0, 255, 0, 255};
+    SDL_Color whiteColor = {255, 255, 255, 255};
+
+    int windowHeight = 500;
+    int windowWidth = arr.size() * 4; // Adjust the width based on your requirements
+    int barWidth = 4; // Width of each bar
+    int spaceBetweenBars = 2; // Space between bars
+
+    // Scale the elements to fit within the window height
+    float scale = static_cast<float>(windowHeight) / *max_element(arr.begin(), arr.end());
+
+    // Calculate the starting x-coordinate to center the bars horizontally
+    int startX = 0;
+
+    for (int i = 0; i < arr.size(); i++)
+    {
+        int barHeight = static_cast<int>(arr[i] * scale);
+        int x = startX + i * (barWidth + spaceBetweenBars);
+
+        // Set the color based on the indices
+        SDL_Color color;
+        if (i == index1 || i == index2) // Elements being compared
+        {
+            color = blueColor;
+        }
+        else if (i < index1 || i < index2) // Already sorted elements
+        {
+            color = greenColor;
+        }
+        else // Elements yet to be compared
+        {
+            color = whiteColor;
+        }
+
+        // Draw filled rectangles representing the bars
+        SDL_SetRenderDrawColor(this->renderer, color.r, color.g, color.b, color.a);
+        SDL_Rect barRect = {x, windowHeight - barHeight, barWidth, barHeight};
+        SDL_RenderFillRect(renderer, &barRect);
+    }
+
+    // Show the updated screen
+    show_screen(this->renderer);
+}
+
 void Visualize_algo::clear_screen(SDL_Renderer* renderer)
 {
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);

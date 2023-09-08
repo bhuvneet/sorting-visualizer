@@ -22,6 +22,7 @@ class Visualize_algo
         void show_screen(SDL_Renderer* renderer);
         void render_loop(vector<int>& myVector, unsigned int red, unsigned int blue);
         void visualize_sort(vector<int>& myVector, SDL_Renderer* renderer, unsigned int newMin, unsigned int currMin);
+        void render_merge_step(const vector<int>& arr, int index1, int index2);
     };
 
 #endif

@@ -1,4 +1,5 @@
 #include "../SortingHeaders/mergeSort.h"
+#include "../SortingHeaders/visualize.h"
 
 mergeSort::mergeSort(){}
 mergeSort::~mergeSort(){}
@@ -11,6 +12,7 @@ mergeSort::~mergeSort(){}
 */
 void mergeSort::sort_array(vector<int> &arr)
 {
+
 	// get length of array to be sorted
 	if (arr.size() > 1)	// if len is less than 2, array is already sorted
 	{
@@ -36,25 +38,34 @@ void mergeSort::sort_array(vector<int> &arr)
 		sort_array(lVector);
 		sort_array(rVector);
 		merge(lVector, rVector, arr);
+
 	}
 }
 
 void mergeSort::merge(vector<int>arr1, vector<int>arr2, vector<int>& OGarr)
 {
+	
+
 	int i = 0;
 	int j = 0;
 	int k = 0;
 
 	while (i < arr1.size() && j < arr2.size())
 	{
+		// Visualize the comparison of elements (e.g., highlight in a different color)
+        //visualize.visualize_sort(OGarr, i, j);
+		
+
 		if (arr1[i] <= arr2[j])
 		{
 			OGarr[k] = arr1[i];
+			this->visualize.render_loop(OGarr, i, j);
 			i++;
 		}
 		else
 		{
 			OGarr[k] = arr2[j];
+			this->visualize.render_loop(OGarr, i, j);
 			j++;
 		}
 		k++;
@@ -63,12 +74,14 @@ void mergeSort::merge(vector<int>arr1, vector<int>arr2, vector<int>& OGarr)
 	while (i < arr1.size())
 	{
 		OGarr[k] = arr1[i];
+		this->visualize.render_loop(OGarr, i, j);
 		i++;
 		k++;
 	}
 	while (j < arr2.size())
 	{
 		OGarr[k] = arr2[j];
+		this->visualize.render_loop(OGarr, i, j);
 		j++;
 		k++;
 	}
