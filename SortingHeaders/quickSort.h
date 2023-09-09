@@ -10,7 +10,9 @@ class quickSort : public sort_algo
     public:
         quickSort(/* args */);
         ~quickSort();
-        void sort_array(vector<int> &myVector);  // inherited classes will have their implementation
+        void sort_array(vector<int> &myVector);
+        void sort_array(vector<int> &myVector, int start, int end);  // inherited classes will have their implementation
+        int partition_array(vector<int> &part_vector, int start, int end);
 };
 
 #endif

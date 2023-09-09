@@ -91,6 +91,15 @@ int main(int argc, char* argv[])
 		else if(stoi(argv[1]) == 6)	// quick sort
 		{
 			cout <<  "in quick sort" << endl;
+			quickSort quick_sort;
+			int len = myArray.myVector.size();
+			quick_sort.sort_array(myArray.myVector, 0, len - 1);	// pass random array to selection sort
+			printf(" SORTED ARRAY\n");
+			
+			for(int i = 0; i < myArray.myVector.size(); ++i)
+			{
+				printf("%d\n", myArray.myVector[i]);
+			}
 		}
 		else if(stoi(argv[1]) == 7)		// merge sort
 		{
