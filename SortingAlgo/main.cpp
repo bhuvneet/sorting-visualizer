@@ -90,7 +90,6 @@ int main(int argc, char* argv[])
 		}
 		else if(stoi(argv[1]) == 6)	// quick sort
 		{
-			cout <<  "in quick sort" << endl;
 			quickSort quick_sort;
 			int len = myArray.myVector.size();
 			quick_sort.sort_array(myArray.myVector, 0, len - 1);	// pass random array to selection sort

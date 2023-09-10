@@ -2,11 +2,13 @@
 #define QSORT_H
 
 #include "common.h"
+#include "../SortingHeaders/visualize.h"
 
 class quickSort : public sort_algo
 {
     private:
-        /* data */
+        Visualize_algo visualize;
+        
     public:
         quickSort(/* args */);
         ~quickSort();
