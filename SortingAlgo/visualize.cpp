@@ -32,13 +32,11 @@ void Visualize_algo::visualize_sort(vector<int>& myVector, SDL_Renderer* rendere
     int numElements = myVector.size();
     int windowHeight = 500; 
     int windowWidth = numElements * 4; 
-    //printf("window width: %d\n", windowWidth);
 
     // Calculate the space between bars and the width of each bar
     int spaceBetweenBars = 2; // Set the space between bars
     //int barWidth = (windowWidth - (numElements - 1) * spaceBetweenBars) / numElements;
     int barWidth = (1000 / (numElements + spaceBetweenBars)) - 1;
-    //printf("BAR WIDTH %d\n", barWidth);
 
     // Scale the elements to fit within the window height
     float scale = static_cast<float>(windowHeight) / maxElementHeight;
@@ -48,7 +46,6 @@ void Visualize_algo::visualize_sort(vector<int>& myVector, SDL_Renderer* rendere
 
     // Calculate the total width of all bars including spaces between them
     int totalWidth = numElements * barWidth + (numElements - 1) * spaceBetweenBars;
-    //printf("width: %d\n", totalWidth);
 
     // Calculate the starting x-coordinate to center the bars horizontally
     int startX = 0;
@@ -61,12 +58,10 @@ void Visualize_algo::visualize_sort(vector<int>& myVector, SDL_Renderer* rendere
     {
         if (index == newMin) // color sorting bars red
         {
-            printf("newMin %d\n", newMin);
             SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
         } 
         else if (index == currMin) 
         {
-            printf("currMin %d\n", currMin);
             SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
         } 
         else 
@@ -76,12 +71,9 @@ void Visualize_algo::visualize_sort(vector<int>& myVector, SDL_Renderer* rendere
 
         int barHeight = static_cast<int>(i * scale);
         int x =  index * (barWidth + spaceBetweenBars);
-        //printf("X: %d\n", x);
 
         // Draw filled rectangles representing the bars
         SDL_Rect barRect = {x, 0, barWidth, barHeight};
-        //SDL_Rect barRect = {x, 0, barWidth, barHeight};
-        // windowHeight - 500 - barHeight
         SDL_RenderFillRect(renderer, &barRect);
 
         index++;

@@ -59,11 +59,4 @@ void bubbleSort::sort_array(vector<int> &myVector)
 			break;
 		}
 	}
-
-				
-	for(int i = 0; i < myVector.size(); ++i)
-	{
-		printf("INSIDE %d\n", myVector[i]);
-	}
-
 }
