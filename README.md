@@ -9,12 +9,6 @@ This Sorting Visualizer project leverages C++ with SLD2 library. It provides an 
 
 <b>Array Size</b>: The size of the array can be modified between 20 to 2000. The lower and upper cap to the number of elements is to ensure that the sort is visualized in a smooth manner and is easy to follow
 
-
-
-https://github.com/bhuvneet/sorting-visualizer/assets/78770635/f1eb4d68-515d-4a7f-8dda-6783047a9d06
-
-
-
 <b>Getting Started:</b>
 - Build the project: ./output/sorting-visualiser <sorting algorithm> <size of array>
   
@@ -33,3 +27,6 @@ https://github.com/bhuvneet/sorting-visualizer/assets/78770635/f1eb4d68-515d-4a7
 - Compare two algorithms
 - Time sorting algorithms using C++'s chrono library to understand the time complexity
 - Use threads to separate UI and worker methods
+
+- <b>Demonstration</b>
+https://github.com/bhuvneet/sorting-visualizer/assets/78770635/f1eb4d68-515d-4a7f-8dda-6783047a9d06
