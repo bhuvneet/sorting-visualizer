@@ -29,4 +29,5 @@ This Sorting Visualizer project leverages C++ with SLD2 library. It provides an 
 - Use threads to separate UI and worker methods
 
 - <b>Demonstration</b>
+
 https://github.com/bhuvneet/sorting-visualizer/assets/78770635/f1eb4d68-515d-4a7f-8dda-6783047a9d06
