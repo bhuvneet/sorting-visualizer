@@ -28,6 +28,8 @@ This Sorting Visualizer project leverages C++ with SLD2 library. It provides an 
 - Time sorting algorithms using C++'s chrono library to understand the time complexity
 - Use threads to separate UI and worker methods
 
-- <b>Demonstration</b>
+<b>Demonstration</b>
 
-https://github.com/bhuvneet/sorting-visualizer/assets/78770635/f1eb4d68-515d-4a7f-8dda-6783047a9d06
+https://github.com/bhuvneet/sorting-visualizer/assets/78770635/454f473c-1cb5-4229-bccc-e142afb3db33
+
+
