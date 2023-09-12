@@ -143,5 +143,5 @@ void Visualize_algo::clear_screen(SDL_Renderer* renderer)
 void Visualize_algo::show_screen(SDL_Renderer* renderer)
 {
     SDL_RenderPresent(renderer);
-    SDL_Delay(200);
+    SDL_Delay(100);
 }

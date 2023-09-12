@@ -28,7 +28,6 @@ void insertionSort::sort_array(vector<int> &myVector)
 			// Visualize the swap with red and blue colors
 			valIndex--;	// move to left index
 			visualize.render_loop(myVector, valIndex + 1, i);
-			printf("I is %d\n", i);
 		}
 
 		// once the while loop is exited, this will be the place where valToSort should be added

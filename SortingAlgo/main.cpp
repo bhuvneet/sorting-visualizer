@@ -28,31 +28,33 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		// length of array passed as argument to program
-		for(int i = 0; i < argc; ++i)
-		{
-			cout << argv[i] << endl;
-		}
-
-		printf(" RANDOM NUMBERS\n");
+		printf("\n\tRANDOM ARRAY:\n\n");
 		for(int i = 0; i < stoi(argv[2]); ++i)
 		{
 			myArray.myVector.push_back(myArray.elements(myArray.rand));	// add random int elements to vector
-			printf("%d ", myArray.myVector[i]);
-		}
+			printf("\t%*d ", 3, myArray.myVector[i]);
 
-		cout << argv[1] << endl;
-		cout << stoi(argv[1]) << endl;
+			// Check if we've printed the desired number of elements per line
+			if ((i + 1) % 10 == 0) {
+				printf("\n"); // Start a new line
+			}
+		}
+		printf("\n"); // Start a new line
 
 		if(stoi(argv[1]) == 1)	// bubble sort
 		{
 			bubbleSort bubb_sort;
 			bubb_sort.sort_array(myArray.myVector);	// pass random array to selection sort
-			printf(" SORTED ARRAY\n");
+			printf("\tBUBBLE SORT: SORTED ARRAY\n\n");
 			
 			for(int i = 0; i < myArray.myVector.size(); ++i)
 			{
-				printf("%d ", myArray.myVector[i]);
+				printf("\t%*d ", 3, myArray.myVector[i]);
+
+				// Check if we've printed the desired number of elements per line
+				if ((i + 1) % 10 == 0) {
+					printf("\n"); // Start a new line
+				}
 			}
 		}
 		else if(stoi(argv[1]) == 2)	// bucket sort
@@ -63,23 +65,32 @@ int main(int argc, char* argv[])
 		{
 			SelectionSort select_sort;
 			select_sort.sort_array(myArray.myVector);	// pass random array to selection sort
-			printf(" SORTED ARRAY\n");
+			printf("\tSELECTION SORT: SORTED ARRAY\n\n");
 			
 			for(int i = 0; i < myArray.myVector.size(); ++i)
 			{
-				printf("%d ", myArray.myVector[i]);
+				printf("\t%*d ", 3, myArray.myVector[i]);
+
+				// Check if we've printed the desired number of elements per line
+				if ((i + 1) % 10 == 0) {
+					printf("\n"); // Start a new line
+				}
 			}
 		}
 		else if(stoi(argv[1]) == 4)	// insertion sort
 		{
-			cout <<  "in insertion sort" << endl;
 			insertionSort insert_sort;
 			insert_sort.sort_array(myArray.myVector);	// pass random array to selection sort
-			printf(" SORTED ARRAY\n");
+			printf("\tINSERTION SORT: SORTED ARRAY\n\n");
 			
 			for(int i = 0; i < myArray.myVector.size(); ++i)
 			{
-				printf("%d\n", myArray.myVector[i]);
+				printf("\t%*d ", 3, myArray.myVector[i]);
+
+				// Check if we've printed the desired number of elements per line
+				if ((i + 1) % 10 == 0) {
+					printf("\n"); // Start a new line
+				}
 			}
 		}
 		else if(stoi(argv[1]) == 5)		// heap sort
@@ -91,28 +102,39 @@ int main(int argc, char* argv[])
 			quickSort quick_sort;
 			int len = myArray.myVector.size();
 			quick_sort.sort_array(myArray.myVector, 0, len - 1);	// pass random array to selection sort
-			printf(" SORTED ARRAY\n");
+			printf("\tQUICKSORT SORTED ARRAY\n\n");
 			
 			for(int i = 0; i < myArray.myVector.size(); ++i)
 			{
-				printf("%d ", myArray.myVector[i]);
+				printf("\t%*d ", 3, myArray.myVector[i]);
+
+				// Check if we've printed the desired number of elements per line
+				if ((i + 1) % 10 == 0) {
+					printf("\n"); // Start a new line
+				}
 			}
 		}
 		else if(stoi(argv[1]) == 7)		// merge sort
 		{
 			mergeSort merge_sort;
 			merge_sort.sort_array(myArray.myVector);	// pass random array to selection sort
-			printf(" SORTED ARRAY\n");
+			printf("\tMERGE SORT: SORTED ARRAY\n\n");
 			
 			for(int i = 0; i < myArray.myVector.size(); ++i)
 			{
-				printf("%d ", myArray.myVector[i]);
+				printf("\t%*d ", 3, myArray.myVector[i]);
+
+				// Check if we've printed the desired number of elements per line
+				if ((i + 1) % 10 == 0) {
+					printf("\n"); // Start a new line
+				}
 			}
 		}
 		else
 		{
 			cout << "Invalid choice of sorting algoritm. Exiting program..." << endl;
 		}
+		printf("\n"); // Start a new line
 	}
 	
 	return 0;
